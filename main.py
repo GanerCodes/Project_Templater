@@ -1,7 +1,8 @@
-from uuid import uuid4
-from shutil import copytree
 from consolemenu import *
 from consolemenu.items import *
+
+from uuid import uuid4
+from shutil import copytree
 from string import ascii_letters
 from os import listdir, path, rename, system
 
