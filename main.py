@@ -8,6 +8,7 @@ from os import listdir, path, rename, system
 template_path = "/home/ganer/Projects/Project_Templater/templates/"
 projects_path = "/home/ganer/Projects/"
 temp_projects_path = "/home/ganer/Projects/TEMP_PROJECTS/"
+folder_name_replacement = "FOLDER_NAME"
 
 make_uuid = lambda: ''.join(ascii_letters[i % len(ascii_letters)] for i in uuid4().bytes)
 
@@ -15,7 +16,7 @@ menu = ConsoleMenu("Choose a project template")
 
 def replace_folder_names(loc, fold_name):
     for i in listdir(loc):
-        if (spl := path.splitext(i))[0] == "FOLDER_NAME":
+        if (spl := path.splitext(i))[0] == folder_name_replacement:
             rename(
                 path.join(loc, i),
                 path.join(loc, fold_name + spl[-1])
