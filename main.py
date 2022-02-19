@@ -33,7 +33,7 @@ def replace_folder_names(loc, fold_name):
                     path.join(
                         projects_path if (
                             t := input(
-                                'Enter project name (leave blank for temp project)'
+                                'Enter project name (leave blank for temp project): '
                             ).strip()
                         ) else temp_projects_path,
                         (name := t if t else make_uuid())
