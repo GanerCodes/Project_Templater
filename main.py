@@ -1,12 +1,15 @@
 from consolemenu import *
 from consolemenu.items import *
 
+from sys import argv
 from uuid import uuid4
 from shutil import copytree
 from string import ascii_letters
 from os import listdir, path, rename, system
 
-template_path = "/home/ganer/Projects/Project_Templater/templates/"
+system(f"echo '{argv[0]}' > /tmp/hfoiuhoiusdfhoiusdf.txt")
+
+template_path = f"{path.dirname(argv[0])}/templates/"
 projects_path = "/home/ganer/Projects/"
 temp_projects_path = "/home/ganer/Projects/TEMP_PROJECTS/"
 folder_name_replacement = "FOLDER_NAME"

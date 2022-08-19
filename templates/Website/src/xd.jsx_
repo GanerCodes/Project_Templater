@@ -1,0 +1,10 @@
+<div className="app">
+  <h1 className="title"> Hello, world! </h1>
+  <p> Welcome back, {name} </p>
+  <p>
+    <strong>Your friends are:</strong>
+  </p>
+  <ul>{
+    ['Sarah', 'James', 'Hercule'].map(x => <li>{x}</li>)
+  }</ul>
+</div>
